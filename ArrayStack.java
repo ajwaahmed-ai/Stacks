@@ -156,9 +156,17 @@ public class ArrayStack implements Stack {
             A3.push(A2.a[i]);
         }
 
-        return A3;
+        return A3;     
+    }
 
-        
+    public String toString() {
+        StringBuffer temp = new StringBuffer();
+
+        for(Node i = head.next; i != head; i = i.next){
+            temp.append(i.data + " ");
+        }
+
+        return temp.toString();
     }
 
     public static void main(String[] args) {
