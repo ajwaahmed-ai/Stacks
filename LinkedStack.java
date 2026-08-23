@@ -165,8 +165,17 @@ public class LinkedStack implements Stack{
         return l3;
     }
 
-    
+    public String toString() {
+        StringBuffer temp = new StringBuffer();
 
+        for(Node i = top; i != null; i = i.next){
+            temp.append(i.data + " ");
+        }
+
+        return temp.toString();
+    }
+
+    
     public static void main(String[] args){
         LinkedStack s1 = new LinkedStack();
 
