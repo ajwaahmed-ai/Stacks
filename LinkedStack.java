@@ -49,19 +49,12 @@ public class LinkedStack implements Stack{
         if (size == 0)
             throw new IllegalStateException("stack is empty");
 
-        int length = 0;
-        int counter = 0;
-        Object x = top.data;
-        for(Node i = top; i.next != null; i = i.next){
-            length++;
+        int mid = size/2;
+        Node p = top;
+        for(int i = 0; i < mid; i++){
+            p = p.next;
         }
-        for(Node j = top; j.next != null; j = j.next){
-            if(counter == length/2){
-                x = j.data;
-            };
-            counter++;
-        }
-        return x;
+        return p.data;
     }
 
     public Object pop(){
@@ -76,35 +69,16 @@ public class LinkedStack implements Stack{
         return obj;
     }
 
-    public Node reverse_stack(){
-        Node start = null;
-        Node p = null;
-        Object[] array = new Object[size];
-
-        Node i = top;
-        int j = 0;
-        while(i != null){
-            array[j] = i.data;
-            i = i.next;
-            j++;
+    public void reverse(){
+        Node current = this.top;
+        Node prev = null;
+        while(current != null){
+            Node next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
         }
-
-        int l = array.length - 1;
-        while(l >= 0){
-            Node newNode = new Node(array[l]);
-
-            if(start == null){
-                start = newNode;
-                p = start;
-            } else{
-                p.next = newNode;
-                p = p.next;
-            }
-            l--;
-
-        }
-
-        return start;
+        top = prev;
     }
 
     public boolean equals(LinkedStack s){
@@ -126,12 +100,6 @@ public class LinkedStack implements Stack{
         return true;
     }
 
-    public void display(){
-        for(Node i = top; i != null; i = i.next){
-            System.out.println(i.data);
-        }
-    }
-
     public ArrayStack toArrayStack(){
         ArrayStack a1 = new ArrayStack(this.size);
 
@@ -150,19 +118,27 @@ public class LinkedStack implements Stack{
     }
 
     public LinkedStack merge(LinkedStack l2){
+        
+        LinkedStack temp1 = new LinkedStack();
+        LinkedStack temp2 = new LinkedStack();
+        LinkedStack mergeStack = new LinkedStack();
 
-        Node p = this.reverse_stack();
-        Node q = l2.reverse_stack();
-        LinkedStack l3 = new LinkedStack();
-
-        for(Node i = p; i != null; i = i.next){
-            l3.push(i.data);
+        for(Node i = this.top; i != null; i = i.next){
+            temp1.push(i.data);
         }
-        for(Node j = q; j != null; j = j.next){
-            l3.push(j.data);
+        for(Node j = l2.top; j != null; j = j.next){
+            temp2.push(j.data);
         }
 
-        return l3;
+        for(int i = 0; i < this.size; i++){
+            mergeStack.push(temp1.pop());
+        }
+        
+        for(int i = 0; i < l2.size; i++){
+            mergeStack.push(temp2.pop());
+        }
+
+        return mergeStack;
     }
 
     public String toString() {
@@ -175,6 +151,42 @@ public class LinkedStack implements Stack{
         return temp.toString();
     }
 
+    public LinkedStack Clone(){
+        LinkedStack s1 = new LinkedStack();
+        LinkedStack s2 = new LinkedStack();
+        Node p = this.top;
+        while(p != null){
+            s1.push(p.data);
+            p = p.next;
+        }
+
+        for(int i = 0; i < s1.size; i++){
+            s2.push(s1.pop());
+        }
+        return s2;
+    }
+
+    public LinkedStack[] split(){
+        LinkedStack s1 = new LinkedStack();
+        LinkedStack s2 = new LinkedStack();
+
+        int mid = this.size / 2;
+        Node p = this.top;
+        
+        for(int i = 0; i < mid; i++){
+            s1.push(p.data);
+            p = p.next;
+        }
+        for(int i = mid; i < this.size; i++){
+            s2.push(p.data);
+            p = p.next;
+        }
+
+        s1.reverse();
+        s2.reverse();
+
+        return new LinkedStack[]{s1,s2};
+    }
     
     public static void main(String[] args){
         LinkedStack s1 = new LinkedStack();
@@ -195,7 +207,6 @@ public class LinkedStack implements Stack{
 
         LinkedStack s3 = s1.merge(s2);
 
-        s3.display();
 
 
         
