@@ -175,7 +175,7 @@ public class ArrayStack implements Stack {
 
         a1.push(10);
         a1.push(20);
-        a1.push(30);
+        a1.push(100);
         a1.push(40);
         a1.push(50);
 
