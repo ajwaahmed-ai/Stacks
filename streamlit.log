@@ -1,0 +1,60 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+2026-10-24 12:45:02.313 Uvicorn server started on :::8501
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.0.2:8501
+  External URL: http://34.27.142.64:8501
+
+2026-10-24 12:47:44.552 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:49:03.212 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:49:58.817 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:50:02.382 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-24 12:51:01.076 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:51:04.837 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-24 12:52:23.347 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:52:27.031 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-24 12:53:40.163 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:53:43.808 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-24 12:54:23.412 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:54:26.973 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-24 12:54:31.077 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-24 12:55:13.552 `use_column_width` was removed and has no effect. Use `width='stretch'`, `width='content'`, or an integer pixel value instead.
+2026-10-24 12:55:17.197 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-24 12:55:22.489 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+  Stopping...
